@@ -63,7 +63,7 @@ def best_price_from_igxe():
                     igxe_cookies = cookies_and_headers['igxe']['cookies']
                     r = requests.get(igxe_url, params=this_igxe_params, headers=igxe_headers, cookies=igxe_cookies, timeout=5, verify=False)
                 except:
-                    print ('Error when fetch {0} with price {1}, skip...'.format(k.encode('GB18030'), csgo_price[k]))
+                    print ('Error when fetch {0} with price {1}, skip...'.format(k, csgo_price[k]))
                     time.sleep(10*random.random())
                     continue
                 #解析请求获取的页面
